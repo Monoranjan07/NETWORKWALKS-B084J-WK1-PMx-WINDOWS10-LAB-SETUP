@@ -183,7 +183,7 @@ The host operating system is not established by my evidence, so it is not specif
 I downloaded the Windows 10 22H2 English ISO as installation media for the virtual machine.
 
 <p align="center">
-  <img src="images/01-windows-10-iso-download.png" alt="Windows 10 English International ISO download page" width="800"><br>
+  <img src="windows-10-iso-download.png" alt="Windows 10 English International ISO download page" width="800"><br>
   <em>Figure 1 – Windows 10 English International ISO download page.</em>
 </p>
 
@@ -192,7 +192,7 @@ I downloaded the Windows 10 22H2 English ISO as installation media for the virtu
 I created the Windows 10 virtual machine in VMware Workstation 17 Player and configured its hardware: 8 GB RAM, 4 processors and a 20 GB NVMe virtual disk. Its network adapter was set to the custom network (Network Walks / VMnet2).
 
 <p align="center">
-  <img src="images/02-windows10-vm-settings.png" alt="VMware Workstation Windows 10 virtual machine settings" width="800"><br>
+  <img src="windows10-vm-settings.png" alt="VMware Workstation Windows 10 virtual machine settings" width="800"><br>
   <em>Figure 2 – VMware Workstation virtual machine configuration for the Windows 10 VM.</em>
 </p>
 
@@ -201,7 +201,7 @@ I created the Windows 10 virtual machine in VMware Workstation 17 Player and con
 In the Virtual Network Editor, VMnet2 is a custom NAT network with subnet `10.0.0.0`, mask `255.255.255.0` and gateway `10.0.0.1`. No port forwarding entries are configured. Allow active FTP and Allow any OUI are enabled, the UDP timeout is 30 seconds, the config port is 0, and IPv6 is disabled.
 
 <p align="center">
-  <img src="images/03-vmware-vmnet2-nat-settings.png" alt="VMware Virtual Network Editor VMnet2 NAT settings" width="800"><br>
+  <img src="vmware-vmnet2-nat-settings.png" alt="VMware Virtual Network Editor VMnet2 NAT settings" width="800"><br>
   <em>Figure 3 – VMware Virtual Network Editor showing the VMnet2 NAT settings.</em>
 </p>
 
@@ -221,7 +221,7 @@ Inside Windows 10, I configured a static IPv4 address instead of relying on DHCP
 | Preferred DNS | 8.8.8.8 |
 
 <p align="center">
-  <img src="images/04-windows10-static-ip-configuration.png" alt="Windows 10 static IPv4 configuration and connectivity testing" width="800"><br>
+  <img src="windows10-static-ip-configuration.png" alt="Windows 10 static IPv4 configuration and connectivity testing" width="800"><br>
   <em>Figure 4 – Windows 10 static IPv4 configuration and connectivity testing.</em>
 </p>
 
@@ -230,7 +230,7 @@ Inside Windows 10, I configured a static IPv4 address instead of relying on DHCP
 From Command Prompt, I used `ipconfig` to confirm the addressing and `ping` to test the Kali Linux VM (`10.0.0.2`), a public IP (`8.8.8.8`), and two domain names (`google.com`, `networkwalks.com`). Results are summarised in [Lab Verification](#-lab-verification).
 
 <p align="center">
-  <img src="images/05-windows10-network-verification.png" alt="Command Prompt network connectivity verification" width="800"><br>
+  <img src="windows10-network-verification.png" alt="Command Prompt network connectivity verification" width="800"><br>
   <em>Figure 5 – Command Prompt network connectivity verification.</em>
 </p>
 
